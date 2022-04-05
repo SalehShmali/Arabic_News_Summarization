@@ -25,12 +25,12 @@ model_name="bert-base-arabert"
 arabert_prep = ArabertPreprocessor(model_name=model_name, keep_emojis=False)
 
 _DESCRIPTION = """\
-The Arabic news summary contain ~38K samples of open domain title and content.
+The Arabic news summary contain ~26K samples of open domain title and content.
 "title" refers to the summary
 "content" refers to the article content
 """
 
-_URL = "https://github.com/SalehShmali/Arabic_News_Summarization/master/article_aljazeera.csv"
+_URL = "https://github.com/SalehShmali/Arabic_News_Summarization/master/articles.csv"
 
 
 class ArabicNewsConv(datasets.GeneratorBasedBuilder):
@@ -69,7 +69,7 @@ class ArabicNewsConv(datasets.GeneratorBasedBuilder):
         ]
 
     def _generate_examples(self, filepath):
-        with open("article_aljazeera.csv",'r',encoding='utf-8') as f:
+        with open("articles.csv",'r',encoding='utf-8') as f:
             csv_reader = csv.reader(f)
             for i , row in enumerate(csv_reader):
                 if i==0:
