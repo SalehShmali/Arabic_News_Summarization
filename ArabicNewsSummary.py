@@ -30,7 +30,7 @@ The Arabic news summary contain ~26K samples of open domain title and content.
 "content" refers to the article content
 """
 
-_URL = "https://github.com/SalehShmali/Arabic_News_Summarization/blob/main/articles.csv"
+_URL = "https://raw.githubusercontent.com/SalehShmali/Arabic_News_Summarization/main/articles.csv"
 
 
 class ArabicNewsConv(datasets.GeneratorBasedBuilder):
