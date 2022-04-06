@@ -59,7 +59,7 @@ class ArabicNewsConv(datasets.GeneratorBasedBuilder):
         )
 
     def _split_generators(self, dl_manager):
-        downloaded_file = dl_manager.download_and_extract(_URL)
+        downloaded_file = dl_manager.download(_URL)
 
         return [
             datasets.SplitGenerator(
